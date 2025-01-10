@@ -46,7 +46,6 @@ const CardContainer: React.FC<CardContainerProps> = ({
     onValue(child(ref(db), "/main/tasks"), (snapshot) =>
       setTaskData(snapshot.val())
     );
-    console.log(taskData);
   }, []);
 
   const handleDeleteTask = async (taskId: number) => {

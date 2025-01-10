@@ -45,7 +45,6 @@ const OptionsPopUp: React.FC<OptionsPopUpProps> = ({
 
   const updateDate = (value: ValuePiece) => {
     if (value !== null) {
-      console.log(calType, value);
       if (calType === "fill") {
         onChangeDateFill(value);
       } else if (calType === "filter") {

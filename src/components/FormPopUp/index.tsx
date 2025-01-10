@@ -71,7 +71,6 @@ const FormPopUp: React.FC<FormPopUpProps> = ({
   const handleAddTask = async (newTask: valuesType) => {
     try {
       const dbRef = ref(db, "/main/tasks");
-      console.log(newTask);
       // Fetch existing data once
       const snapshot = await get(dbRef);
       const existingData = snapshot.val() || []; // Default to an empty array if no data exists

@@ -36,7 +36,6 @@ const initialState: initStateType = {
   searchQuery: "",
   selectedSort: "default",
 };
-console.log(initialState);
 
 const filterReducer = (state: initStateType, action: actionType) => {
   switch (action.type) {
@@ -158,7 +157,6 @@ export const FormProvider: React.FC<{ children: React.ReactNode }> = ({
     // Apply search query
     if (state.searchQuery) {
       updatedData = updatedData.filter((item) => {
-        console.log(item.title === state.searchQuery);
         return item.title
           .toLowerCase()
           .includes(state.searchQuery.toLowerCase());
